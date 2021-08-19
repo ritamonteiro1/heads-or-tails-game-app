@@ -6,6 +6,11 @@ class ResultView extends StatefulWidget {
 }
 
 class _ResultViewState extends State<ResultView> {
+
+  void _back(){
+    Navigator.pop(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +22,7 @@ class _ResultViewState extends State<ResultView> {
           children: [
             Image.asset('assets/images/logo.png'),
             GestureDetector(
-              onTap: (){},
+              onTap: _back,
               child: Image.asset('assets/images/button_back.png'),
             ),
           ], ),
