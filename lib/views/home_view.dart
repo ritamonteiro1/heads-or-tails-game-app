@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:heads_or_tails_game_app/views/result_view.dart';
 
 class HomeView extends StatefulWidget {
   @override
@@ -8,7 +9,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
 
   void _play(){
-    
+    Navigator.push(context, MaterialPageRoute(builder: (context) => ResultView()));
   }
 
   @override
