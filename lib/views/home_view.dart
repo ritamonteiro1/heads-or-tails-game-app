@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:heads_or_tails_game_app/views/result_view.dart';
 
@@ -9,7 +11,10 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
 
   void _play(){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => ResultView()));
+    var items = ['heads', 'tails'];
+    var number = Random().nextInt(items.length);
+    var result = items[number];
+    Navigator.push(context, MaterialPageRoute(builder: (context) => ResultView(result)));
   }
 
   @override
